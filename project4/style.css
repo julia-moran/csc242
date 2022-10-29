@@ -1,0 +1,121 @@
+/* Julia Moran, CSC 242, Fall 2022, Assignment 4 */
+
+/*
+    Author:         Julia Moran
+    Major:          Computer Science
+    Creation Date:  October 15, 2022
+    Due Date:       October 20, 2022
+    Course:         CSC242 010
+    Professor Name: Dr. Schwesinger
+    Assignment:     #4
+    Filename:       style.css
+    Purpose:        This file serves as a style sheet avaliable for
+                    project4.php
+*/
+/*//////////SOURCE CITED///////////*/
+/*
+    Source:         MDN Web Docs
+    Title:          "Styling Tables"
+    Date Retrieved: October 16, 2022
+    Retrieved from: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    Note:           the table-layout, width, border-collapse, text-align,
+                    padding, and line-height properties were retrieved from
+                    the MDN Web Docs page entitled "Styling Tables" on October
+                    16th, 2022. The striping using a tbody element and nth-
+                    child selector were also retrieved from "Styleing Tables
+                    on Ocotber 16, 2022.
+*/
+
+/* Julia Moran, CSC 242, Fall 2022, Assignment 4 */
+
+/* TODO: add at least four style rules */
+
+/*Table Formating*/
+table {
+    /*Citation Source: The table-layout and width
+    //properties used to format the table collumns'
+    //widths was retrieved from https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    //on October 16, 2022*/
+    table-layout: fixed; /*Allows the table collumns to be resized*/
+    width: 100%; /*The table will fill the entire window*/
+
+    /*Surround the entire table with a border*/
+    border: 2px solid;
+
+    /*Citation Source: the border-collapse property to
+    //combine the table's borders was retrieved from
+    //https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    //on October 16, 2022*/
+    border-collapse: collapse; /*Collapses the border into one line*/
+}
+
+/*Table Header Formatting*/
+th {
+    /*Format the text for the header*/
+    font-weight: normal;
+    font-size: large;
+
+    /*Set the background color and text color*/
+    background-color: dimgray;
+    color: white;
+
+    /*Citation Source: The text-align property used
+    //to format the table header was retrieved from
+    //https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    //on October 16, 2022*/
+    text-align: center; /*Center the header text*/
+
+    /*Surround the header with a border*/
+    border: 1px solid black;
+
+    /*Citation Source: the border-collapse property to
+    //combine the table's borders was retrieved from
+    //https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    //on October 16, 2022*/
+    border-collapse: collapse; /*Collapses the borders into one line*/
+}
+
+/*Table Data Formatting*/
+td {
+    /*Set the text size*/
+    font-size: normal;
+
+    /*Citation Source: The text-align, line-height, and padding
+    //properties used to format the text in the table's data
+    //were retrieved from https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    //on October 16, 2022*/
+    /*These properties will be used to center the data to the
+    //middle of their respective cells*/
+    text-align: center;
+    line-height: 2;
+    padding: 10px;
+
+    /*Surround each piece of data with a border*/
+    border: 1px solid;
+
+    /*Citation Source: the border-collapse property to
+    //combine the table's borders was retrieved from
+    //https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+    //on October 16, 2022*/
+    border-collapse: collapse; /*Collapses the borders into one line*/
+}
+
+/*Table rows will be highlighted yellow when hovered over*/
+tr:hover {
+    background-color: lightyellow !important;
+}
+
+/*Citation Source: The following statements used to alternate between
+//background colors for every other row are based on statements retrieved
+//from https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Styling_tables
+//on October 16, 2022*/
+
+/*Odd rows will be lavender*/
+tbody tr:nth-child(odd) {
+    background-color: lavender;
+}
+
+/*Even rows will be light purple*/
+tbody tr:nth-child(even) {
+    background-color: thistle;
+}
