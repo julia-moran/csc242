@@ -24,7 +24,7 @@ TODO:
     <head>
         <meta charset="utf-8">
         <title>Assignment 4 Animal Table</title>
-        <link rel="stylesheet" href="newstyle.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
     <?php
