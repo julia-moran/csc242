@@ -1,0 +1,170 @@
+/*
+    Author:         Julia Moran
+    Major:          Computer Science
+    Creation Date:  November 21, 2022
+    Due Date:       December 15, 2022
+    Course:         CSC242 010
+    Professor Name: Dr. Schwesinger
+    Assignment:     #10
+    Filename:       style.css
+    Purpose:        This file serves as a style sheet avaliable for
+                    all of the pages in the website.
+*/
+/*//////////SOURCES CITED///////////*/
+/*
+    Source:         Dr. Schwesinger
+    Date Retrieved: November 23, 2022
+    Filename:       style.css
+    Retrieved from: Dr. Schwesinger's acad public directory at schwesin/csc242/projects/project8-handout/style.css
+    Note:           The format for the body and nav elements were authored by
+                    Dr. Schwesinger.
+*/
+/*
+    Source:         MDN Web Docs
+    Title:          "font-family"
+    Date Retrieved: November 23, 2022
+    Retrieved from: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+    Note:           The font-family property was retrieved from the MDN web
+                    docs page entitled "font-family" on November 23, 2022.
+*/
+/*
+    Source:         MDN Web Docs
+    Title:          "Advanced form styling"
+    Date Retrieved: November 30, 2022
+    Retrieved from: https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
+    Note:           The input[type=submit] and input[type=text] selectors were
+                    retrieved from the MDN web docs page entitled "Advanced
+                    form styling" on November 30, 2022.
+*/
+
+/*Citation Source: The styling for the body selector was retrieved from
+    Dr. Schwesinger's acad public directory at schwesin/csc242/projects/project8-handout/style.css
+    on November 23, 2022*/
+body {
+    margin:40px auto;
+    max-width:1000px;
+    line-height:1.6;
+    font-size:18px;
+    color:#444;
+    padding:0 10px
+}
+
+/*Headers Formatting*/
+h1, h3 {
+    line-height: 1.7 /*Set the height for the headers*/
+}
+h1 {
+    /*Citation Source: The font-family property was retrieved from 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight on
+        November 23, 2022*/
+    font-family: Arial, sans-serif; /*Set the font of the first header to be Arial*/
+}
+
+/*Display All Sims Table Formatting*/
+table.simTable {
+    border-collapse: collapse; /*Collapse the borders on this table*/
+    width: 100%; /*Set the width to fill the maximum size*/
+}
+/*Display All Sims Table Data and Header Formatting*/
+table.simTable td, table.simTable th {
+    border: 1px solid; /*Surround the header and data with borders*/
+    text-align: left; /*Align the sim data to the left*/
+    padding: 8px; /*Set the padding for the sim data*/
+}
+/*Display All Sims Table Header Formatting*/
+table.simTable th {
+    font-size: large; /*Increase the font size for the headers*/
+    background-color: paleturquoise; /*Set the background color for the header row*/
+    color: dimgrey; /*Set the text color for the header row*/
+}
+/*Display All Sims Table First Column Formatting*/
+table.simTable td:first-child, table.simTable th:first-child {
+    width: 1px; /*Make the selection column thinner than the other columns*/
+    text-align: center; /*Center the radio buttons in the table*/
+}
+/*Display All Sims Table First Column Formatting*/
+table.simTable td:first-child {
+    background-color: steelblue; /*Make the columns with radio buttons a different color from the sim data*/
+}
+
+/*Citation Source: The styling for the navigation element was retrieved from
+    Dr. Schwesinger's acad public directory at schwesin/csc242/projects/project8-handout/style.css
+    on November 23, 2022*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkgreen;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: "Arial Black", sans-serif; 
+    padding: 1em 1em;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: yellowgreen;
+}
+
+/*Citation Source: The input[type=submit] and input[type=text selectors were
+    retrieved from https://developer.mozilla.org/en-US/docs/Learn/Forms/Advanced_form_styling
+    on November 30, 2022*/
+input[type=submit],
+input[type=text],
+select,
+button {
+    /*Set the width, padding, and margin for the submit, text, select, and
+        button elements*/
+    width: 100px;
+    padding: 3px;
+    margin: 5px;
+}
+
+/*Text Area Formatting*/
+textarea {
+    /*Set the width and height of the text area to enter more details*/
+    width: 50%;
+    height: 100px;
+}
+
+/*Preformatted Text Format*/
+pre {
+    color: red; /*Print error messages in red*/
+}
+
+/*Aspiration Menu Formatting*/
+#aspiration {
+    width: 148px; /*Make the menu to select the aspiration wider than the other
+                    menus to fit the longer aspiration names*/
+}
+
+/*Create Account Fields Formatting*/
+#account {
+    width: 200px; /*Widen the fields to create a account*/
+}
+
+/*Trait Table Formatting*/
+table.traitTable {
+    border: none; /*Make sure there are no borders for the checkbox table*/
+    border-width: 0px;  /*Make sure there are no borders for the checkbox table*/
+    font-size: 13px; /*Decrease the size of the traits*/
+    text-align: right; /*Align the text for the traits to the right*/
+    margin-left: 20px; /*Set the margins for the trait table*/
+}
+/*Trait Table Data Formatting*/
+table.traitTable td {
+    padding-right: 10px; /*Set the right padding of the trait checkboxes*/
+}
+
+/*Description Term Formatting*/
+dt {
+    font-weight: bold; /*Make the term bold*/
+    background-color: greenyellow; /*Make the background color of the term green*/
+    width: 100%; /*Set the width of the term to the max width*/
+}
