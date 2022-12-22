@@ -1,0 +1,49 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+</head>
+<body>
+
+<?php
+// TODO If the session variables exist, then only show a link to the log out
+// page, otherwise only show links to the sign in and create account pages.
+
+    if(isset($_SESSION['username'])) {
+        print "<nav>";        
+        print "<a href=\"log_out.php\">Log Out</a>";
+        print "</nav>";
+    }
+    else {
+        print "<nav>";
+        print "<a href=\"sign_in.php\">Sign In</a>";
+        print "<a href=\"create_account.php\"> Create Account</a>";
+        print "</nav>";
+    }
+
+?>
+
+<h1>Home</h1>
+
+<?php
+// TODO If the session variables exist then display them as an HTML description
+// list, otherwise display a message to sign in or create an account.
+    if(isset($_SESSION['username'])) {
+
+
+        print "<dl>";
+        print "<dt>Email</dt>";
+        print "<dd>" . $_SESSION['username'] . "</dd>";
+        print "</dl>";
+    }
+    else {
+        print "<p>Please Sign In or Create an Account.</p>";
+    }
+?>
+
+</body>
+</html>

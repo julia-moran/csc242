@@ -1,0 +1,92 @@
+<?php
+
+//    Updated by:     Julia Moran
+//    Major:          Computer Science
+//    Creation Date:  November 17, 2022
+//    Due Date:       November 28, 2022
+//    Course:         CSC242 010
+//    Professor Name: Dr. Schwesinger
+//    Assignment:     #9
+//    Filename:       index.php
+//    Purpose:        This file serves as the homepage and will display user
+//                    information and the log out link if the user is logged in,
+//                    and it will show the sign in and create account links if
+//                    the user is not logged in.
+
+//    Sources Cited:
+
+//    Author:         Dr. Schwesinger
+//    Filename:       index.php
+//    Retrieved Date: November 17, 2022
+//    Retrieved from: Dr. Schwesinger's acad public directory at schwesin/csc242/projects/project9-handout/index.php
+//    Note:           All content except for the code in PHP
+//                    was authored by Dr. Schwesinger.
+
+//    Source:         PHP Manual
+//    Title:          "ucfirst"
+//    Date Retrieved: November 19, 2022
+//    Retrieved From: https://www.php.net/manual/en/function.ucfirst.php
+//    Note:           This function, used to capitalize the first letter of the
+//                    description labels, was retrieved from the PHP online
+//                    manual on November 19, 2022 on https://www.php.net/manual/en/function.ucfirst.php
+
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+</head>
+<body>
+
+<?php
+// TODO If the session variables exist, then only show a link to the log out
+// page, otherwise only show links to the sign in and create account pages.
+
+    //Check if a user is logged in
+    if(isset($_SESSION['username'])) {
+        //Show a link to log out if the user is logged in
+        print "<nav>";        
+        print "<a href=\"log_out.php\">Log Out</a>";
+        print "</nav>";
+    }//end if
+    else {
+        //Show the sign in and create account links if the user is not logged in
+        print "<nav>";
+        print "<a href=\"sign_in.php\">Sign In</a>";
+        print "<a href=\"create_account.php\"> Create Account</a>";
+        print "</nav>";
+    }//end else
+
+?>
+
+<h1>Home</h1>
+
+<?php
+// TODO If the session variables exist then display them as an HTML description
+// list, otherwise display a message to sign in or create an account.
+
+    //Check if the user is logged in
+    if(isset($_SESSION['username'])) {
+        print "<dl>";
+        //Print each session variable as a description
+        foreach ($_SESSION['username'] as $key => $record) {
+
+            //Citation source: The ucfirst function was retrieved from the PHP
+            //online manual on November 19, 2022 on https://www.php.net/manual/en/function.ucfirst.php
+            print "<dt>" . (($key != "dob") ? ucfirst($key) : "Date of Birth") . "</dt>";
+
+            print "<dd>" . $record . "</dd>";
+        }//end foreach
+
+        print "</dl>";
+    }//end if
+    //Display a message to sign in or create an account if the user is not logged in
+    else {
+        print "<p>Please Sign In or Create an Account.</p>";
+    }//end else
+?>
+
+</body>
+</html>
