@@ -1,0 +1,151 @@
+
+Problem 1:
+4533
+
+Question 2:
+Gerry
+Mallory
+
+Question 3:
+exam|1|49.76
+exam|2|49.42
+
+Question 4:
+99.39
+98.94
+97.62
+94.83
+93.96
+91.54
+89.84
+88.85
+85.02
+84.71
+81.68
+81.0
+75.35
+74.47
+73.1
+72.82
+71.15
+70.4
+70.29
+61.52
+58.86
+53.43
+52.26
+51.19
+50.2
+47.05
+
+Question 5:
+170
+
+Question 6:
+Clifford|Everett
+Rubin|Glover
+Landon|King
+Noe|Morris
+Lawrence|Park
+Mary|Rosales
+
+Question 7:
+67
+
+Question 8:
+85.5625
+
+Question 9:
+Eddie|Britt
+Young|Buck
+Susie|Burke
+Marietta|Conrad
+Newton|Cross
+Clifford|Everett
+Rosalind|Flores
+Rubin|Glover
+Jessica|Hamilton
+Andre|Hebert
+Rosanna|Hunter
+Zelma|Kane
+Landon|King
+Roosevelt|Logan
+Kendall|Lucas
+Michael|Moon
+Noe|Morris
+Vanessa|Myers
+Lawrence|Park
+Shannon|Rivers
+Mary|Rosales
+Emerson|Schwartz
+Brittney|Wolf
+
+Question 10
+45.3
+
+Question 11:
+77.7892307692308
+
+Question 12:
+Carol|Dale
+Carey|Dalton
+Hollie|Daugherty
+Lenny|David
+Carissa|Day
+Cassandra|Dunlap
+
+Question 13:
+5
+
+Question 14:
+3
+
+Question 15:
+Amado
+Francisco
+Gerardo
+Humberto
+Leopoldo
+Odessa
+Ofelia
+Olin
+Osvaldo
+Rico
+Rogelio
+Sergio
+Socorro
+
+Question 16:
+Son|Tran
+Freddy|Stout
+Melva|Roy
+Mary|Rosales
+Jerry|Rivera
+Teddy|Reese
+Gabriel|Peters
+Jonathan|Mayo
+Zelma|Kane
+Olin|Hewitt
+Rae|Henson
+Judith|Graham
+Fran|Giles
+Meredith|Fitzpatrick
+Carissa|Day
+Carey|Dalton
+Carol|Dale
+Tracey|Barnett
+Humberto|Acosta
+
+Question 17:
+69.95
+
+Question 18:
+39
+
+Question 19:
+Leola|Goff
+Rene|Kerr
+Claudine|Kirkland
+
+Question 20:
+44.83|100.0|78.6041150442478
