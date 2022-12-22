@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang=en>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <?php include "nav.html" ?>
+    <h1>List of Users</h1>
+<?php
+require_once("functions.php");
+
+// open a database connection
+$db = new PDO("sqlite:user.db");
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+if (isset($_POST['operation'])) {
+    $operation = $_POST['operation'];
+
+    // INSERT
+    if ($operation === 'create'
+        && isset($_POST['name'])
+        && isset($_POST['email'])
+        && isset($_POST['dob'])
+        && isset($_POST['password'])
+    ){
+
+        $addedName = $_POST['name'];
+        $addedEmail = $_POST['email'];
+        $addedDOB = $_POST['dob'];
+        $addedPassword = $_POST['password'];
+
+        $sql = "INSERT INTO user (name, email, dob, password)
+                VALUES (?, ?, ?, ?)";
+
+        $insert = $db->prepare($sql);
+        
+
+        $addedName = $_POST['name'];
+        $addedEmail = $_POST['email'];
+        $addedDOB = $_POST['dob'];
+        $addedPassword = $_POST['password'];
+
+        $insert->execute([$addedName, $addedEmail, $addedDOB, $addedPassword]);
+
+    }
+    // UPDATE
+    else if ($operation === 'update'
+        && isset($_POST['password'])
+        && isset($_POST['rows'])
+    ){
+   //     if(!empty($_POST['rows'])) {
+//            foreach($_POST['rows'] as $isChecked) {
+//                if(!empty($_POST['rows'])) {
+//          $isChecked = $_POST['form_value'];
+//          if(isset($_POST['form_value'])) {
+//                print "<pre> CHecked! </pre>";
+//                $newPassword = $_POST['password'];
+              //  $selectedRows = $_POST['rows'];                
+            $count = 0;
+
+            foreach($_POST['rows'] as $row) {
+//                print "<pre> . $row . </pre>";//
+//              if(in_array($row, $rows)) {       
+               
+        // TODO UPDATE a record with a prepared statement
+                $sql = "UPDATE user
+                        SET password = ?";
+                $update = $db->prepare($sql);
+
+                $update->execute([$newPassword, $newPassword]);
+            }
+    }
+    // DELETE
+    else if ($operation === 'delete' && isset($_POST['rows'])){
+        // TODO DELETE a record with a prepared statement
+    foreach($_POST['rows'] as $isChecked) {
+        if(!empty(['form_value']))
+//        foreach($_POST['rows'] as $isChecked) {
+            print "<pre> Checked! </pre>";
+
+            $sql = "DELETE FROM user
+                    WHERE name = ?";
+            $delete = $db->prepare($sql);
+            $update->execute([$isChecked]);       
+        }
+
+
+    }
+}
+
+$stmt = $db->query("select * from user order by name");
+$records = $stmt->fetchall(PDO::FETCH_ASSOC);
+printTable($records);
+$db = null;
+?>
+
+  </body>
+</html>
