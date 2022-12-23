@@ -1,3 +1,6 @@
+Link to Web Page:
+https://csit.kutztown.edu/~jmora678/csc242/project8/
+
 Assignment Instructions:
 
 The assignment8 directory contains an incomplete multiple page CRUD application.
