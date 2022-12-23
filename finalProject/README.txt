@@ -1,3 +1,19 @@
+Link to Web Page:
+https://csit.kutztown.edu/~jmora678/csc242/finalProject/
+
+Description:
+This project is a web page based on The Sims 4 that allows a user to create a character or "sim" based on the possible attributes one can give
+a sim in The Sims 4. These attributes include basic information — which consists of a first and last name, pronouns, and age — that are required
+of each sim. If the user chooses to edit their sim, they may edit any basic information as well as add and/or edit more detailed information about
+the sim, such as the sim's aspiration and traits. The user can also view all of their sims or a single sim at a time. Sims can also be deleted. 
+
+The user must create an account to create sims. The user information is stored in a SQLite table where the usernames and emails of each user must
+be unique. Passwords in this table are hashed to make sure they are not stored in pain text. Logging in to the website will start a session that will
+last until the user logs out. 
+
+The information about user-created sims is stored in two tables, one that stores the basic information about each sim, and one that stored the detailed
+information. Each sim is given a unique ID so they can be individually referenced. 
+
 Assignment Instructions:
 
 The goal of this project is to develop a basic data driven web application.
