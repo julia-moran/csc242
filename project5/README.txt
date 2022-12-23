@@ -1,3 +1,6 @@
+Link to Web Page:
+https://csit.kutztown.edu/~jmora678/csc242/project5/project5.php
+
 Assignment Instructions:
 
 You are to complete the project5.php to use PHP to read in the animals.csv file and produce an HTML table of its contents based on the form data. 
